@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — RetroVault</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-active="producten">
+
+<header class="site-header" id="site-header"></header>
+
+<section class="section container" id="product-section">
+  <!-- injected by JS -->
+</section>
+
+<section class="section container" id="related-section" style="padding-top:0;">
+  <div class="section-head">
+    <h2>Misschien ook interessant</h2>
+  </div>
+  <div class="grid" id="related-grid"></div>
+</section>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="products.js"></script>
+<script src="shop.js"></script>
+<script src="layout.js"></script>
+<script src="cards.js"></script>
+<script>
+  function getIdFromUrl(){
+    const params = new URLSearchParams(window.location.search);
+    return params.get("id");
+  }
+
+  function renderNotFound(){
+    document.getElementById("product-section").innerHTML = `
+      <div class="empty-state">
+        <div class="glyph">📀</div>
+        <h3>Product niet gevonden</h3>
+        <p>Dit product bestaat niet (meer) in onze catalogus.</p>
+        <a href="producten.html" class="btn btn-primary">Terug naar alle producten</a>
+      </div>
+    `;
+  }
+
+  function stockLine(product){
+    if(product.stock <= 0) return `<div class="stock-line stock-out">✕ Niet op voorraad</div>`;
+    if(product.stock <= 3) return `<div class="stock-line stock-low">● Nog maar ${product.stock} op voorraad</div>`;
+    return `<div class="stock-line stock-in">● Op voorraad (${product.stock} beschikbaar)</div>`;
+  }
+
+  function renderProduct(product){
+    document.title = `${product.name} — RetroVault`;
+
+    const specRows = Object.entries(product.specs).map(([k,v]) =>
+      `<tr><td>${k}</td><td>${v}</td></tr>`).join("");
+
+    document.getElementById("product-section").innerHTML = `
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> /
+        <a href="producten.html?cat=${product.category}">${categoryLabel(product.category)}</a> /
+        <span style="color:var(--paper);">${product.name}</span>
+      </div>
+      <div class="product-detail">
+        <div class="product-media">
+          ${stockBadge(product)}
+          <span class="badge-cat">${product.platform}</span>
+          <span class="glyph">${product.glyph}</span>
+        </div>
+        <div class="product-info">
+          ${product.tag ? `<span class="detail-tag">${product.tag}</span>` : ""}
+          <h1>${product.name}</h1>
+          <p>${product.description}</p>
+          <div>
+            ${product.oldPrice ? `<span class="price-old">${formatPrice(product.oldPrice)}</span>` : ""}
+            <span class="price">${formatPrice(product.price)}</span>
+          </div>
+          ${stockLine(product)}
+
+          <div class="qty-row">
+            <div class="qty-control" id="qty-control">
+              <button type="button" id="qty-minus" aria-label="Minder">−</button>
+              <input type="text" id="qty-input" value="1" inputmode="numeric">
+              <button type="button" id="qty-plus" aria-label="Meer">+</button>
+            </div>
+            <button class="btn btn-primary" id="add-to-cart-btn" ${product.stock <= 0 ? "disabled" : ""}>
+              ${product.stock <= 0 ? "Uitverkocht" : "Toevoegen aan winkelwagen"}
+            </button>
+          </div>
+
+          <table class="spec-table">
+            <tbody>${specRows}</tbody>
+          </table>
+        </div>
+      </div>
+    `;
+
+    if(product.stock > 0){
+      const qtyInput = document.getElementById("qty-input");
+      const minus = document.getElementById("qty-minus");
+      const plus = document.getElementById("qty-plus");
+      const addBtn = document.getElementById("add-to-cart-btn");
+
+      const clamp = (val) => Math.max(1, Math.min(product.stock, val));
+
+      minus.addEventListener("click", () => {
+        qtyInput.value = clamp((parseInt(qtyInput.value) || 1) - 1);
+      });
+      plus.addEventListener("click", () => {
+        qtyInput.value = clamp((parseInt(qtyInput.value) || 1) + 1);
+      });
+      qtyInput.addEventListener("change", () => {
+        qtyInput.value = clamp(parseInt(qtyInput.value) || 1);
+      });
+      addBtn.addEventListener("click", () => {
+        const qty = clamp(parseInt(qtyInput.value) || 1);
+        const ok = addToCart(product.id, qty);
+        if(ok){
+          showToast(`${qty} × ${product.name} toegevoegd aan winkelwagen`);
+        }
+      });
+    }
+
+    const related = PRODUCTS.filter(p => p.id !== product.id && p.platform === product.platform).slice(0, 4);
+    const relatedFallback = related.length ? related : PRODUCTS.filter(p => p.id !== product.id).slice(0, 4);
+    document.getElementById("related-grid").innerHTML = relatedFallback.map(renderProductCard).join("");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const id = getIdFromUrl();
+    const product = id ? getProductById(id) : null;
+    if(!product){
+      renderNotFound();
+      document.getElementById("related-section").style.display = "none";
+      return;
+    }
+    renderProduct(product);
+  });
+</script>
+</body>
+</html>
