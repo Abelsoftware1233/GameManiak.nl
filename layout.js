@@ -44,7 +44,7 @@ function renderFooter(){
           <span class="dot"></span>RETROVAULT
         </div>
         <p style="max-width:32ch; color:var(--paper-dim); font-family:var(--font-mono); font-size:11.5px;">
-          Gereviseerde retro consoles, games &amp; accessoires. Getest, gereinigd en klaar om te spelen.
+          Gloednieuwe retro consoles, games &amp; accessoires. Getest, en klaar om te verzenden & spelen.
         </p>
       </div>
       <div class="footer-cols">
