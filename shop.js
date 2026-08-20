@@ -5,7 +5,7 @@
    ========================================================= */
 
 const CART_KEY = "retrovault_cart";
-const SHIPPING_FLAT = 8.95;
+const SHIPPING_FLAT = 0,00;
 const FREE_SHIPPING_THRESHOLD = 100;
 const VALID_PROMO = { code: "RETRO10", percent: 10 };
 
