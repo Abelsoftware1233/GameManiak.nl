@@ -63,8 +63,8 @@ function renderFooter(){
         <div class="footer-col">
           <h4>Info</h4>
           <span style="display:block; margin-bottom:8px;">30 dagen garantie</span>
-          <span style="display:block; margin-bottom:8px;">Gratis verzending v.a. €75</span>
-          <span style="display:block;">Demo-webshop</span>
+          <span style="display:block; margin-bottom:8px;">Gratis verzending v.a. €100</span>
+          <span style="display:block;">Gamemaniak-webshop</span>
         </div>
       </div>
     </div>
