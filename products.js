@@ -195,16 +195,16 @@ const PRODUCTS = [
     paypalId: "7DWU56DLEMYLU"
   },
   {
-    id: "p-wmwario-android",
-    name: "WMWario 90s · 2030 · Builder · Matrix · Dimension (Android)",
+    id: "p-mario-android",
+    name: "Mario 90s · 2030 · Builder · Matrix · Dimension (Android)",
     category: "game",
     platform: "Universeel",
     price: 9.99,
     stock: 999,
     glyph: "📱",
     tag: null,
-    short: "Bundel Android-games in de WMWario-reeks.",
-    description: "Een bundel van meerdere WMWario Android-games in verschillende thema's.",
+    short: "Bundel Android-games in de Mario-reeks.",
+    description: "Een bundel van meerdere Mario Android-games in verschillende thema's.",
     specs: { "Platform": "Android", "Formaat": "Digitale download" },
     paypalId: "P3TZE99UGD9EY",
     weroUrl: "https://buy.stripe.com/5kQdR28JOeRfeT1bBr6Zy03"
