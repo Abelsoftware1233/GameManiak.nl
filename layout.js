@@ -20,8 +20,8 @@ function renderHeader(){
         ${navItem("index.html", "Home", "home")}
         ${navItem("producten.html", "Alle producten", "producten")}
         ${navItem("producten.html?cat=console", "Consoles", "consoles")}
-        ${navItem("producten.html?cat=game", "PSP Games", "games")}
-        ${navItem("producten.html?cat=accessoire", "Accessoires", "accessoires")}
+        ${navItem("producten.html?cat=game", "PSP & Android Games", "games")}
+        ${navItem("producten.html?cat=accessoire", "Entertainment Apps", "accessoires")}
       </nav>
       <div class="header-actions">
         <button class="nav-toggle" aria-label="Menu">☰</button>
