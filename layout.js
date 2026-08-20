@@ -14,7 +14,7 @@ function renderHeader(){
   el.innerHTML = `
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <span class="dot"></span>RETROVAULT<span style="color:var(--paper-dim);font-size:11px;margin-left:4px;">.shop</span>
+        <span class="dot"></span>GAMEMANIAK<span style="color:var(--paper-dim);font-size:11px;margin-left:4px;">.shop</span>
       </a>
       <nav class="main-nav">
         ${navItem("index.html", "Home", "home")}
