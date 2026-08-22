@@ -101,7 +101,7 @@ const PRODUCTS = [
     specs: { "Type": "Digitale download" },
     paypalId: "LN7JZRSCZ2EL8",
     image: "https://pics.paypal.com/00/p/NjY3YzUzYWMtNzlmNS00ZWNlLWIyNjYtZjNiMWNjMGZjZTM5/image_2.JPG",
-    weroUrl: "https://buy.stripe.com/aFabIU2lq24t9yH5d36Zy04"
+    weroUrl: "https://buy.stripe.com/fZu3co7FK38x4en0WN6Zy0b"
   },
   {
     id: "p-mp3-converter",
