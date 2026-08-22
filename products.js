@@ -92,7 +92,7 @@ const PRODUCTS = [
     name: "Abel123 Apps Maker",
     category: "accessoire",
     platform: "Universeel",
-    price: 49.99,
+    price: 39.99,
     stock: 999,
     glyph: "🛠️",
     tag: null,
