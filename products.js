@@ -9,7 +9,7 @@ const PRODUCTS = [
   // ---------------- ABEL123 DIGITALE PRODUCTEN & GAMES ----------------
   {
     id: "p-psp-portable",
-    name: "Brand New! Abel123 PSP Gaming Portable (10,000+ Games)",
+    name: "Brand New! Abel123 PSP Gaming Portable (10,000+ Games) Color: Black,White",
     category: "console",
     platform: "PSP",
     price: 149.99,
@@ -25,7 +25,7 @@ const PRODUCTS = [
   },
   {
     id: "p-gameboy-retro",
-    name: "Brand New! Abel123 Game Boy Retro Console (400+ Games) 2Players",
+    name: "Brand New! Abel123 Game Boy Retro Console (400+ Games) 2Players Colors: Blue,Red,Yellow,Black",
     category: "console",
     platform: "Universeel",
     price: 49.99,
