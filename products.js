@@ -89,7 +89,7 @@ const PRODUCTS = [
   },
   {
     id: "p-apps-maker",
-    name: "Abel123 Apps Maker",
+    name: "Abel123 Android Apps Maker",
     category: "accessoire",
     platform: "Universeel",
     price: 39.99,
