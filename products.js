@@ -23,6 +23,22 @@ const PRODUCTS = [
     image: "https://pics.paypal.com/00/p/ODcyYWFjYTYtOTAxMy00MjVlLThiNDYtMjkxYjc2ZjViMWIx/image_2.JPG",
     weroUrl: "https://buy.stripe.com/eVq4gs4ty8sRh19eND6Zy00"
   },
+    {
+    id: "p-psp-portable",
+    name: "Brand New! Abel123 PSP SF3000 (20,000+ Games) Kleur: Zwart",
+    category: "console",
+    platform: "PSP",
+    price: 109.99,
+    stock: 10,
+    glyph: "🎮",
+    tag: "Nieuw",
+    short: "Draagbare PSP-gamingconsole met meer dan 20.000 voorgeladen games.",
+    description: "Een gloednieuwe draagbare gamingconsole in PSP-stijl, kant-en-klaar geladen met meer dan 20.000 games.",
+    specs: { "Type": "Handheld console", "Inhoud": "20.000+ voorgeladen games" },
+    paypalId: "RU3JAUX2YJ4CW",
+    image: "https://pics.paypal.com/00/p/ODA2NTA2OTktMTNhZS00YmU3LTg2NDEtZjA2MWUxMDYyZjNm/image_2.JPG",
+    weroUrl: "https://buy.stripe.com/8x2dR24tycJ78uD5d36Zy0c"
+  },
   {
     id: "p-gameboy-retro",
     name: "Brand New! Abel123 Game Boy Retro Console (400+ Games) 2Spelers Kleur: Blauw,Rood,Geel,Zwart",
