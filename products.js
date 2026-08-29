@@ -24,7 +24,7 @@ const PRODUCTS = [
     weroUrl: "https://buy.stripe.com/eVq4gs4ty8sRh19eND6Zy00"
   },
     {
-    id: "p-psp-portable",
+    id: "p-psp-sf3000",
     name: "Brand New! Abel123 PSP SF3000 (20,000+ Games) Kleur: Zwart",
     category: "console",
     platform: "PSP",
