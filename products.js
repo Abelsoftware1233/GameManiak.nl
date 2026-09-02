@@ -1,7 +1,7 @@
 /* =========================================================
    RETROVAULT — product catalog
    category: "console" | "game" | "accessoire"
-   platform: "PSP" | "PS1" | "GBA" | "N64" | "Universeel"
+   platform: "PSP" | "PS1" | "GBA" | "N64" | "PS2"| "PS3" | "Nintendo" | "Universeel"
    stock: aantal op voorraad (0 = uitverkocht)
    ========================================================= */
 
