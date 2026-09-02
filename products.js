@@ -55,6 +55,22 @@ const PRODUCTS = [
     image: "https://pics.paypal.com/00/p/M2E1NGY1ZmUtYTdkMC00M2E3LWEzNTctNWI2YjgyNDI5Yjhk/image_2.JPG",
     weroUrl: "https://buy.stripe.com/aFabIU2lq24t9yH5d36Zy04"
   },
+   {
+    id: "p-mp3-player",
+    name: "Brand New! Abel123 MP3 Player Bluetooth 5.0 Touchscreen Kleur:Zwart",
+    category: "console",
+    platform: "Universeel",
+    price: 29.99,
+    stock: 10,
+    glyph: "📱",
+    tag: "Nieuw",
+    short: "MP3 Player Bluetooth 5.0 Touchscreen met USB Data Kabel en Oordopjes",
+    description: "Audioformaat: MP3, WAV, APE, FLAC Opslag: ingebouwde opslag + max. 64 GB TF-kaartuitbreiding, Interface: 3,5 mm audio-aansluiting + micro-USB-oplaadkabel.",
+    specs: { "Type": "Handheld console", "MP3": "1", "Inhoud": "Oordopjes Oplaadkabel" },
+    paypalId: "TPU5XYXMD7D6W",
+    image: "https://pics.paypal.com/00/p/NDE0ZWRmYTAtM2NiNi00MDVlLWI4ZGUtYzU1OWU3M2RmYjE0/image_2.JPG",
+    weroUrl: "https://buy.stripe.com/cNi3cogcg4cBfX59tj6Zy0d"
+  },
   {
     id: "p-emulator",
     name: "Abel123 Emulator",
